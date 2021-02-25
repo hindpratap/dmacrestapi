@@ -1,0 +1,1104 @@
+SNO,Table,Table Description,Field,Description,Field Length
+1,MAKT,Master material short texts ,SPRAS,Language Key,1
+2,,,MAKTX,Material Description,40
+3,,,SPRAS_ISO,2-Character SAP Language Code,2
+4,MARA,General Material Data,MATNR,Material Number,18
+5,,,MATNR,Material Number,18
+6,,,ERSDA,Created On,8
+7,,,ERNAM,Name of Person Who Created the Object,12
+8,,,LAEDA,Date of Last Change,8
+9,,,AENAM,Name of person who changed object,12
+10,,,PSTAT,Maintenance status,15
+11,,,LVORM,Flag Material for Deletion at Client Level,1
+12,,,MTART,Material Type,4
+13,,,MBRSH,Industry Sector,1
+14,,,MATKL,Material Group,9
+15,,,BISMT,Old material number,18
+16,,,MEINS,Base Unit of Measure,3
+17,,,BSTME,Purchase Order Unit of Measure,3
+18,,,ZEINR,Document number (without document management system),22
+19,,,ZEIAR,Document type (without Document Management system),3
+20,,,ZEIVR,Document version (without Document Management system),2
+21,,,ZEIFO,Page format of document (without Document Management system),4
+22,,,AESZN,Document change number (without document management system),6
+23,,,BLATT,Page number of document (without Document Management system),3
+24,,,BLANZ,Number of sheets (without Document Management system),3
+25,,,FERTH,Production/inspection memo,18
+26,,,FORMT,Page Format of Production Memo,4
+27,,,GROES,Size/dimensions,32
+28,,,WRKST,Basic material (basic constituent of a material),14
+29,,,NORMT,Industry Standard Description (such as ANSI or ISO),18
+30,,,LABOR,Laboratory/design office,3
+31,,,EKWSL,Purchasing Value Key,4
+32,,,BRGEW,Gross Weight,14
+33,,,NTGEW,Net Weight,14
+34,,,GEWEI,Weight Unit,3
+35,,,VOLUM,Volume,14
+36,,,VOLEH,Volume Unit,3
+37,,,BEHVO,Container requirements,2
+38,,,RAUBE,Storage conditions,2
+39,,,TEMPB,Temperature conditions indicator,2
+40,,,TRAGR,Transportation Group,4
+41,,,STOFF,Hazardous material number,18
+42,,,SPART,Division,2
+43,,,KUNNR,Competitor,10
+44,,,WESCH,Quantity: Number of GR/GI slips to be printed,14
+45,,,BWVOR,Procurement rule,1
+46,,,BWSCL,Source of Supply,1
+47,,,SAISO,Season Category,4
+48,,,ETIAR,Label type,2
+49,,,ETIFO,Label form,2
+50,,,EAN11,International Article Number (EAN/UPC),18
+51,,,NUMTP,Category of International Article Number (EAN),2
+52,,,LAENG,Length,14
+53,,,BREIT,WIDTH,14
+54,,,HOEHE,Height,14
+55,,,MEABM,Unit of Dimension for Length/Width/Height,3
+56,,,PRDHA,Product Hierarchy,18
+57,,,CADKZ,CAD Indicator<,1
+58,,,ERGEW,Allowed packaging weight,1
+59,,,ERGEI,Weight Unit,3
+60,,,ERVOL,Allowed packaging volume,14
+61,,,ERVOE,Volume Unit<,3
+62,,,GEWTO,Excess Weight Tolerance for Handling unit,3
+63,,,VOLTO,Excess Volume Tolerance of the Handling Unit<,3
+64,,,VABME,Variable Purchase Order Unit Active,1
+65,,,KZKFG,Configurable Material,1
+66,,,XCHPF,Batch management requirement indicator,1
+67,,,VHART,Packaging Material Type,4
+68,,,FUELG,Maximum level,3
+69,,,STFAK,Stacking factor,5
+70,,,MAGRV,Material Group: Packaging Materials,4
+71,,,BEGRU,Authorization Group,4
+72,,,QMPUR,QM in Procurement is Active,1
+73,,,RBNRM,Catalog Profile,9
+74,,,MHDRZ,Minimum Remaining Shelf Life,6
+75,,,MHDHB,Total shelf life,6
+76,,,MHDLP,Storage percentage,5
+77,,,VPSTA,Maintenance status of complete material,15
+78,,,EXTWG,External Material Group,18
+79,,,MSTAE,Cross-Plant Material Status,2
+80,,,MSTAV,Cross-distribution-chain material status,2
+81,,,MSTDE,Date from which the cross-plant material status is valid,8
+82,,,MSTDV,Date from which the X-distr.-chain material status is valid,8
+83,,,KZUMW,Environmentally Relevant,1
+84,,,KOSCH,Product allocation determination procedure,18
+85,,,NRFHG,Material qualifies for discount in kind,1
+86,,,MFRPN,Manufacturer Part Number,40
+87,,,MFRNR,Manufacturer number,10
+88,,,BMATN,To material number,18
+89,,,MPROF,Mfr part profile,18
+90,,,PROFL,Dangerous Goods Indicator Profile,3
+91,,,IHIVI,Highly Viscous,1
+92,,,ILOOS,Indicator: In Bulk/Liquid,1
+93,,,KZGVH,Packaging Material is Closed Packaging,1
+94,,,XGCHP,Indicator: Approved batch record required,1
+95,,,COMPL,Material completion level,2
+96,,,KZEFF,Assign effectivity parameter values/ override change numbers,1
+97,,,RDMHD,Rounding rule for calculation of SLED,1
+98,,,IPRKZ,Period Indicator for Shelf Life Expiration Date,1
+99,,,PRZUS,Indicator: Product composition printed on packaging,1
+100,,,MTPOS_MARA,General item category group,1
+101,,,GEWTO_NEW,Excess Weight Tolerance for Handling unit,4
+102,,,VOLTO_NEW,Excess Volume Tolerance of the Handling Unit,5
+103,,,WRKST_NEW,Basic Material,48
+104,,,AENNR,Change Number,12
+105,,,MATFI,Material Is Locked,1
+106,,,CMREL,Relevant for Configuration Management,1
+107,,,SATNR,Cross-Plant Configurable Material,18
+108,,,SLED_BBD,Expiration Date,1
+109,,,GTIN_VARIANT,Global Trade Item Number Variant,2
+110,,,GENNR,Material Number of the Generic Material in Prepack Materials,18
+111,,,SERLV,Level of Explicitness for Serial Number,1
+112,,,RMATP,Reference material for materials packed in same way,18
+113,,,GDS_RELEVANT,Indicator: Global Data Synchronization-Relevant,1
+114,,,MCOND,Material Condition Management<,1
+115,,,RETDELC,Return Code,1
+116,,,LOGLEV_RETO,Return to Logistics Level,1
+117,,,NSNID,NATO Item Identification Number,9
+118,,,WEORA,Acceptance At Origin,1
+119,,,_-CWM_-TOLGR,Tolerance Group for Catch Weight Management,9
+120,,,_-CWM_-TARA,Checkbox,1
+121,,,_-CWM_-TARUM,Base Unit of Measure,3
+122,,,PACKCODE,Packaging Code,10
+123,,,DG_PACK_STATUS,Dangerous Goods Packaging Status,10
+124,,,ANP,ANP Code,9
+125,,,MATNR_LONG,"Material Number (40 Characters, needed f. technical reasons)",40
+126,,,BISMT_LONG,"Old material number (40 Characters, Technical Requirement)",40
+127,,,E1MARA1,Additional Fields for E1MARAM,
+128,,,MATNR_EXTERNAL,Material Number,40
+129,,,MATNR_VERSION,Version Number for MATNR Field,10
+130,,,MATNR_GUID,External GUID for MATNR Field,32
+131,,,BMATN_EXTERNAL,Long Material Number for Field BMATN,40
+132,,,BMATN_VERSION,Version Number for Field BMATN,10
+133,,,BMATN_GUID,External GUID for Field BMATN,32
+134,,,STOFF_EXTERNAL,Long Material Number for Field STOFF,40
+135,,,STOFF_VERSION,Version Number for Field STOFF,10
+136,,,STOFF_GUID,External GUID for Field STOFF,32
+137,,,HUTYP_DFLT,Standard HU Type,32
+138,,,PILFERABLE,Pilferable,1
+139,,,WHSTC,Warehouse Storage Condition,2
+140,,,WHMATGR,Warehouse Material Group,4
+141,,,HNDLCODE,Handling Indicator,4
+142,,,HAZMAT,Relevant for Hazardous Substances,1
+143,,,HUTYP,Handling Unit Type,4
+144,,,TARE_VAR,Variable Tare Weight,1
+145,,,MAXC,Maximum Allowed Capacity of Packaging Material,17
+146,,,MAXC_TOL,Overcapacity Tolerance of the Handling Unit,5
+147,,,MAXL,Maximum Packing Length of Packaging Material,17
+148,,,MAXB,Maximum Packing Width of Packaging Material,17
+149,,,MAXH,Maximum Packing Height of Packaging Materia,17
+150,,,MAXDIM_UOM,Unit of Measure for Maximum Packing Length/Width/Height,3
+151,,,HERKL,Country of Origin of Material (Non-Preferential Origin),3
+152,,,MFRGR,Material freight group,8
+153,,,QQTIME,Quarantine Period,4
+154,,,QQTIMEUOM,Time Unit for Quarantine Period,3
+155,,,QGRP,Quality Inspection Group,4
+156,,,SERIAL,Serial Number Profile,4
+157,,,PS_SMARTFORM,Form Nam,30
+158,,,CWQPROC,EWM CW: Catch Weight Profile for Entering CW Quantity,2
+159,,,CWQTOLGR,EWM-CW: Catch Weight Tolerance Group for EWM,9
+160,,,ADPROF,Adjustment Profile,3
+161,,,IPMIPPRODUCT,ID for an Intellectual Property (CRM Product),40
+162,,,MEDIUM,MEDIUM,6
+163,,,COMMODITY,Physical Commodity,18
+164,,,SGT_CSGR,Segmentation Structure,4
+165,,,SGT_COVSA,Segmentation Strategy,8
+166,,,SGT_REL,Segmentation Relevant,1
+167,,,STOFF_LONG,"Hazardous Material Number (40 Chars, Technically Required)",40
+168,,,BMATN_LONG,To material number,40
+169,,,SATNR_LONG,Cross-Plant Configurable Material (40 ch tech. necessary),40
+170,,,GENNR_LONG,Material Number of the Generic Material in Prepack Materials,40
+171,,,RMATP_LONG,Reference material for materials packed in same way,40
+172,MARC,Master material C segment (MARC),WERKS,Plant,4
+173,,,PSTAT,Maintenance status,15
+174,,,LVORM,Deletion Indicator,1
+175,,,BWTTY,Valuation Category,1
+176,,,MAABC,ABC Indicator,1
+177,,,KZKRI,Indicator: Critical part,1
+178,,,EKGRP,Purchasing Group,3
+179,,,AUSME,Unit of issue,3
+180,,,DISPR,Material: MRP profile,4
+181,,,DISMM,MRP Type,2
+182,,,DISPO,MRP Controller,3
+183,,,PLIFZ,Planned Delivery Time in Days,3
+184,,,WEBAZ,Goods receipt processing time in days,3
+185,,,PERKZ,Period Indicator,1
+186,,,AUSSS,Assembly scrap in percent,5
+187,,,DISLS,Lot size (materials planning),2
+188,,,BESKZ,Procurement Type,1
+189,,,SOBSL,Special procurement type,2
+190,,,MINBE,Reorder Point,14
+191,,,EISBE,Safety stock,14
+192,,,BSTMI,Minimum Lot Size,14
+193,,,BSTMA,Maximum Lot Siz,14
+194,,,BSTFE,Fixed lot size,14
+195,,,BSTRF,Rounding value for purchase order quantity,14
+196,,,MABST,Maximum stock level,14
+197,,,LOSFX,Ordering costs,12
+198,,,SBDKZ,Dependent requirements ind. for individual and coll. reqmts,1
+199,,,LAGPR,Storage costs indicator,1
+200,,,ALTSL,Method for Selecting Alternative Bills of Material,1
+201,,,KZAUS,Discontinuation indicator,1
+202,,,AUSDT,Effective-Out Date,8
+203,,,NFMAT,Follow-Up Material,18
+204,,,KZBED,Indicator for Requirements Grouping,1
+205,,,MISKZ,Mixed MRP indicator,1
+206,,,FHORI,Scheduling Margin Key for Floats,3
+207,,,PFREI,Indicator: automatic fixing of planned orders,1
+208,,,FFREI,Release indicator for production orders,1
+209,,,RGEKZ,Indicator: Backflush,1
+210,,,FEVOR,Production Supervisor,3
+211,,,BEARZ,Processing time,6
+212,,,RUEZT,Setup and teardown time,6
+213,,,TRANZ,Interoperation time,6
+214,,,BASMG,Base quantity,14
+215,,,DZEIT,In-house production time,3
+216,,,MAXLZ,Maximum Storage Period,5
+217,,,LZEIH,Unit for maximum storage period,3
+218,,,KZPRO,Indicator: withdrawal of stock from production bin,1
+219,,,GPMKZ,Indicator: Material Included in Rough-Cut Planning,1
+220,,,UEETO,Overdelivery tolerance limit,4
+221,,,UEETK,Indicator: Unlimited Overdelivery Allowed,1
+222,,,UNETO,Underdelivery tolerance limit,
+223,,,WZEIT,Total replenishment lead time (in workdays),3
+224,,,ATPKZ,Replacement part,1
+225,,,VZUSL,Surcharge factor for cost in percent,5
+226,,,HERBL,State of manufacture,2
+227,,,INSMK,Post to Inspection Stock,1
+228,,,SSQSS,QA Control Key,8
+229,,,KZDKZ,Documentation required indicator,1
+230,,,UMLMC,Stock in transfer (plant to plant),14
+231,,,LADGR,Loading Group,4
+232,,,XCHPF,Batch management requirement indicator,1
+233,,,USEQU,Quota arrangement usage,1
+234,,,LGRAD,Service level,4
+235,,,AUFTL,Splitting Indicator,1
+236,,,PLVAR,Plan Version,2
+237,,,OTYPE,Object Type,2
+238,,,OBJID,Object ID,8
+239,,,MTVFP,Checking Group for Availability Check,2
+240,,,PERIV,Fiscal Year Variant,2
+241,,,KZKFK,Indicator: take correction factors into account,1
+242,,,VRVEZ,Shipping setup time,6
+243,,,VBAMG,Base quantity for capacity planning in shipping,14
+244,,,VBEAZ,Shipping processing time,6
+245,,,LIZYK,Delivery cycl,4
+246,,,BWSCL,Source of Supply,1
+247,,,KAUTB,Indicator: &quot;automatic purchase order allowed&quot,1
+248,,,KORDB,Indicator: Source list requirement,1
+249,,,STAWN,Commodity Code/Import Code Number for Foreign Trade,17
+250,,,HERKL,Country of Origin of Material (Non-Preferential Origin),3
+251,,,HERKR,Region of Origin of Material (Non-Preferential Origin),3
+252,,,EXPME,Unit of measure for commodity code (foreign trade),3
+253,,,MTVER,Material Group Export for Foreign Trade,4
+254,,,PRCTR,Profit Center,10
+255,,,TRAME,Stock in Transit,15
+256,,,MRPPP,PPC planning calendar,3
+257,,,SAUFT,Ind.: Repetitive mfg allowed,1
+258,,,FXHOR,Planning time fence,3
+259,,,VRMOD,Consumption mode,1
+260,,,VINT1,Consumption period: backward,3
+261,,,VINT2,Consumption period: forward,3
+262,,,STLAL,Alternative BOM,2
+263,,,STLAN,BOM Usage,1
+264,,,PLNNR,Key for Task List Group,8
+265,,,APLAL,Group Counter,2
+266,,,LOSGR,Lot Size for Product Costing,14
+267,,,SOBSK,Special Procurement Type for Costing,2
+268,,,FRTME,Production unit,3
+269,,,LGPRO,Issue Storage Location,4
+270,,,DISGR,MRP Group,4
+271,,,KAUSF,Component scrap in percent,5
+272,,,QZGTP,Certificate Type,4
+273,,,TAKZT,Takt time,3
+274,,,RWPRO,Range of coverage profile,3
+275,,,COPAM,Local field name for CO/PA link to SOP,10
+276,,,ABCIN,Physical inventory indicator for cycle counting,1
+277,,,AWSLS,Variance Key,6
+278,,,SERNP,Serial Number Profile,4
+279,,,STDPD,Configurable material<,18
+280,,,SFEPR,Repetitive manufacturing profile,4
+281,,,XMCNG,Negative stocks allowed in plant,1
+282,,,QSSYS,Required QM System for Vendor,4
+283,,,LFRHY,Planning cycle,3
+284,,,RDPRF,Rounding Profile,4
+285,,,VRBMT,Reference material for consumption,18
+286,,,VRBWK,Reference plant for consumption,4
+287,,,VRBDT,o date of the material to be copied for consumption,8
+288,,,VRBFK,Multiplier for reference material for consumption,5
+289,,,AUTRU,Reset Forecast Model Automatically,1
+290,,,PREFE,Preference indicator in export/import,1
+291,,,PRENC,Exemption certificate: Indicator for legal control,
+292,,,PRENO,Exemption certificate number for legal control,8
+293,,,PREND,Exemption certificate: Issue date of exemption certificate,8
+294,,,PRENE,Indicator: Vendor declaration exists,1
+295,,,PRENG,Validity date of vendor declaratio,8
+296,,,ITARK,Indicator: Military goods,1
+297,,,PRFRQ,Character Field With Field Length ,7
+298,,,KZKUP,Indicator: Material can be co-product,1
+299,,,STRGR,Planning strategy group,2
+300,,,LGFSB,Default storage location for external procurement,4
+301,,,SCHGT,Indicator: bulk material,1
+302,,,CCFIX,CC indicator is fixed,1
+303,,,EPRIO,Withdrawal Sequence Group for Stocks,4
+304,,,QMATA,Material Authorization Group for Activities in QM,6
+305,,,PLNTY,Task List Type,1
+306,,,MMSTA,Plant-Specific Material Status,2
+307,,,SFCPF,Production Scheduling Profile,6
+308,,,SHFLG,Safety time indicator (with or without safety time),1
+309,,,SHZET,Safety time (in workdays),2
+310,,,MDACH,Action control: planned order processing,2
+311,,,KZECH,Determination of batch entry in the production/process order,1
+312,,,MMSTD,Date from which the plant-specific material status is valid,8
+313,,,MFRGR,Material freight group,
+314,,,FVIDK,Production Version To Be Costed,4
+315,,,INDUS,Material CFOP category,2
+316,,,MOWNR,CAP: Number of CAP products list,12
+317,,,MOGRU,Common Agricultural Policy: CAP products group-Foreign Trade,6
+318,,,CASNR,CAS number for pharmaceutical products in foreign trade,15
+319,,,GPNUM,Production statistics: PRODCOM number for foreign trade,9
+320,,,STEUC,Control code for consumption taxes in foreign trade,16
+321,,,FABKZ,Indicator: Item Relevant to JIT Delivery Schedules,1
+322,,,MATGR,Group of Materials for Transition Matrix,20
+323,,,LOGGR,Logistics handling group for workload calculation,4
+324,,,VSPVB,Proposed Supply Area in Material Master Record<,10
+325,,,DPLFS,Fair share rule,2
+326,,,DPLPU,Indicator: push distribution,1
+327,,,DPLHO,Deployment horizon in days,4
+328,,,MINLS,Minimum lot size for Supply Demand Match,15
+329,,,MAXLS,Maximum lot size for Supply Demand Match,15
+330,,,FIXLS,Fixed lot size for Supply Demand Match,15
+331,,,LTINC,Lot size increment for  Supply Demand Match,15
+332,,,COMPL,Material completion level,2
+333,,,CONVT,Conversion types for production figures<,2
+334,,,FPRFM,Distribution profile of material in plant,3
+335,,,SHPRO,Period Profile for Safety Time,3
+336,,,FXPRU,Fixed-Price Co-Product,1
+337,,,KZPSP,Indicator for cross-project material,1
+338,,,OCMPF,Profile for OCM PP / PS,6
+339,,,APOKZ,Indicator: Is material relevant for APO,1
+340,,,AHDIS,MRP relevancy for dependent requirements,1
+341,,,EISLO,Minimum Safety Stock,15
+342,,,NCOST,Do Not Cost,1
+343,,,MEGRU,Unit of Measure Group<,4
+344,,,ROTATION_DATE,Strategy for Putaway and Stock Removal,1
+345,,,UCHKZ,Indicator for Original Batch Management<,1
+346,,,UCMAT,Reference Material for Original Batches,18
+347,,,IUID_RELEVANT,IUID-Relevant,1
+348,,,IUID_TYPE,Structure Type of UII,10
+349,,,UID_IEA,External Allocation of UII,1
+350,,,SGT_COVS,Segmentation Strategy<,8
+351,,,SGT_STATC,Segmentation Status,1
+352,,,SGT_PRCM,Consumption Priority,1
+353,,,SGT_CHINT,Discrete Batch Number,1
+354,,,SGT_STK_PRT,Stock Protection Indicator,1
+355,,,SGT_DEFSC,Default Stock Segment value,16
+356,,,PPSKZ,Advanced Planning,1
+357,,,PPS_PLANNING_TYPE,Planning Procedure,1
+358,,,PPS_HEUR_ID,Product Heuristic ID,12
+359,,,PPS_FIXPEG,Fixed Pegging,1
+360,,,PPS_PEG_STRATEGY,Pegging Strategy,2
+361,,,PPS_GIPRT,Goods Issue Processing Time,12
+362,,,PPS_CONHAP,Handling Capacity Consumption in Unit of Measure (Gds Rcpt),15
+363,,,PPS_HUNIT,Unit of Measure: Handling Capacity in Goods Receipt,3
+364,,,PPS_CONHAP_OUT,Handling Capacity Consumption in Unit of Measure (Gds Issue),15
+365,,,PPS_HUNIT_OUT,Unit of Measure: Handling Capacity in Goods Issue,3
+366,,,PPS_ATPCHECK,Advanced Planning ATP Check,1
+367,,,PPS_STRATEGY,PP/DS Proposed Strategy,2
+368,,,NFMAT_EXTERNAL,Long Material Number for Field NFMAT,40
+369,,,NFMAT_VERSION,Version Number for Field NFMAT,10
+370,,,NFMAT_GUID,External GUID for Field NFMAT,32
+371,,,"STDPD_EXTERNAL""",Long Material Number for Field STDPD,40
+372,,,STDPD_VERSION,Version Number for Field STDPD,10
+373,,,STDPD_GUID,External GUID for Field STDPD,32
+374,,,VRBMT_EXTERNAL,Long Material Number for Field VRBMT,40
+375,,,VRBMT_VERSION,Version Number for Field VRBMT,10
+376,,,VRBMT_GUID,External GUID for Field VRBMT,32
+377,,,NFMAT_LONG,Follow-Up Material,40
+378,,,STDPD_LONG,Configurable material,40
+379,MARC,Master material C segment (MARC),VRBMT_LONG,Reference material for consumption,40
+380,,,UCMAT_LONG,Reference Material for Original Batches,40
+381,MARD,Master material warehouse/batch segment (MARD),LGORT,Storage Location,4
+382,,,PSTAT,Maintenance status,15
+383,,,LVORM,Flag Material for Deletion at Storage Location Level,1
+384,,,DISKZ,Storage location MRP indicator,1
+385,,,LSOBS,Special procurement type,2
+386,,,LMINB,Reorder point for storage location MRP,14
+387,,,LBSTF,Replenishment quantity for storage location MRP,14
+388,,,HERKL,Country of Origin of Material (Non-Preferential Origin),3
+389,,,EXPPG,Preference indicator (deactivated),1
+390,,,EXVER,Export indicator (deactivated),2
+391,,,LGPBE,Storage Bin,10
+392,,,PRCTL,Profit Center,10
+393,,,LWMKB,Picking area for lean WM,3
+394,,,BSKRF,Inventory correction factor,24
+395,MARM,Master material units of measure (MARM),MEINH,Alternative Unit of Measure for Stockkeeping Unit,3
+396,,,UMREZ,Numerator for Conversion to Base Units of Measure,5
+397,,,UMREN,Denominator for conversion to base units of measure,5
+398,,,EAN11,International Article Number (EAN/UPC),18
+399,,,NUMTP,Category of International Article Number (EAN),2
+400,,,LAENG,Length,14
+401,,,BREIT,Width,14
+402,,,HOEHE,Height,14
+403,,,MEABM,Unit of Dimension for Length/Width/Height,3
+404,,,VOLUM,Volume,14
+405,,,VOLEH,Volume Unit,3
+406,,,BRGEW,Gross Weight,14
+407,,,GEWEI,Weight Unit,3
+408,,,MESUB,Lower-Level Unit of Measure in a Packing Hierarchy,3
+409,,,GTIN_VARIANT,Global Trade Item Number Variant,2
+410,,,_-CWM_-TY2TQ,Type of Parallel Unit of Measure,1
+411,,,NEST_FTR,Remaining Volume after Nesting (in Percentage),4
+412,,,MAX_STACK,Maximum Stacking Factor,3
+413,,,CAPAUSE,Capacity Usage,17
+414,MBEW,Master material material valuation (MBEW),BWKEY,Valuation Area,4
+415,,,BWTAR,Valuation Type,10
+416,,,LVORM,Deletion Indicator,1
+417,,,VPRSV,Price control indicator,1
+418,,,VERPR,Moving Average Price/Periodic Unit Price,12
+419,,,STPRS,Standard price,12
+420,,,PEINH,Price unit,5
+421,,,BKLAS,Valuation Class,4
+422,,,VMVPR,Price Control Indicator in Previous Period,1
+423,,,VMVER,Moving Average Price/Periodic Unit Price in Previous Period,12
+424,,,VMSTP,Standard price in the previous period,12
+425,,,VMPEI,Price unit of previous period,5
+426,,,VMBKL,Valuation Class in Previous Period,4
+427,,,VJVPR,Price Control Indicator in Previous Year,1
+428,,,VJVER,Moving Average Price/Periodic Unit Price in Previous Year,12
+429,,,VJSTP,Standard price in previous year,12
+430,,,LFGJA,Fiscal Year of Current Period,4
+431,,,LFMON,Current period (posting period),2
+432,,,BWTTY,Valuation Category,1
+433,,,ZKPRS,Future price,12
+434,,,ZKDAT,Date as of which the price is valid,8
+435,,,BWPRS,Valuation price based on tax law: level 1,12
+436,,,BWPRH,Valuation price based on commercial law: level 1,12
+437,,,VJBWS,Valuation price based on tax law: level 3,12
+438,,,VJBWH,Valuation price based on commercial law: level 3,12
+439,,,VVJLB,Total valuated stock in year before last,15
+440,,,VVMLB,Total valuated stock in period before last,15
+441,,,VVSAL,Value of total valuated stock in period before last,15
+442,,,ZPLPR,Future planned price,12
+443,,,ZPLP1,Future Planned Price 1,12
+444,,,ZPLP2,Future Planned Price 2,12
+445,,,ZPLP3,Future Planned Price 3,12
+446,,,ZPLD1,Date from Which Future Planned Price 1 Is Valid,8
+447,,,ZPLD2,Date from Which Future Planned Price 2 Is Valid,8
+448,,,ZPLD3,Date from Which Future Planned Price 3 Is Valid,8
+449,,,KALKZ,Indicator: Standard cost estimate for the period,1
+450,,,KALKL,Standard Cost Estimate for Current Period,1
+451,,,XLIFO,LIFO/FIFO-Relevant,1
+452,,,MYPOL,Pool number for LIFO valuation,4
+453,,,BWPH1,Valuation price based on commercial law: level 2,12
+454,,,BWPS1,Valuation price based on tax law: level 2,12
+455,,,ABWKZ,Lowest value: devaluation indicator,2
+456,,,PSTAT,Maintenance status,15
+457,,,KALN1,Cost Estimate Number - Product Costing,12
+458,,,KALNR,Cost Estimate Number for Cost Est. w/o Qty Structure,12
+459,,,BWVA1,Valuation Variant for Future Standard Cost Estimate,3
+460,,,BWVA2,Valuation Variant for Current Standard Cost Estimate,3
+461,,,BWVA3,Valuation Variant for Previous Standard Cost Estimate,3
+462,,,VERS1,Costing Version of Future Standard Cost Estimate,2
+463,,,VERS2,Costing Version of Current Standard Cost Estimate,
+464,,,VERS3,Costing Version of Previous Standard Cost Estimate,2
+465,,,HRKFT,Origin Group as Subdivision of Cost Element,4
+466,,,KOSGR,Costing Overhead Group,10
+467,,,PPRDZ,Period of Future Standard Cost Estimate,3
+468,,,PPRDL,Period of Current Standard Cost Estimate,3
+469,,,PPRDV,Period of Previous Standard Cost Estimate,3
+470,,,PDATZ,Fiscal Year of Future Standard Cost Estimate,4
+471,,,PDATL,Fiscal Year of Current Standard Cost Estimate,4
+472,,,PDATV,Fiscal Year of Previous Standard Cost Estimate,4
+473,,,EKALR,Material Is Costed with Quantity Structure,1
+474,,,VPLPR,Previous planned price,12
+475,,,MLMAA,Material ledger activated at material level,1
+476,,,MLAST,Material Price Determination: Control,1
+477,,,VJBKL,Valuation Class in Previous Year,4
+478,,,VJPEI,Price unit of previous year,7
+479,,,HKMAT,Material-related origin,1
+480,,,EKLAS,Valuation Class for Sales Order Stock,4
+481,,,QKLAS,Valuation Class for Project Stock,4
+482,,,MTUSE,Usage of the material,1
+483,,,MTORG,Origin of the material,1
+484,,,OWNPR,Produced in-house,1
+485,,,BWPEI,Price unit for valuation prices based on tax/commercial law,6
+486,,,CON_FIN_VALLEVEL,Valuation Level,3
+487,,,CON_FIN_VALPROC,Valuation Procedure,3
+488,MEAN,Master Material European Article Number (MEAN),MEINH,Unit of Measure for Display,3
+489,,,LFNUM,Consecutive Number,5
+490,,,EAN11,International Article Number (EAN/UPC),18
+491,,,EANTP,Category of International Article Number (EAN),2
+492,,,HPEAN,Indicator: Main EAN,1
+493,MFHM,Master material production resource/tool (MFHM),OBJTY,Object types of the CIM resource,2
+494,,,OBJID,Object ID of the resource,8
+495,,,ZAEHL,Internal counter,8
+496,,,OBJTY_V,Object types of the CIM resource,2
+497,,,OBJID_V,Object ID of the resource,8
+498,,,KZKBL,Indicator: Create load records for prod. resources,1
+499,,,STEUF,Control Key for Management of Production Resources/Tools,4
+500,,,STEUF_REF,Control key cannot be changed,1
+501,,,FGRU1,Grouping key 1 for production resources/tools,4
+502,,,FGRU2,Grouping key 2 for production resources/tools,4
+503,,,PLANV,Production resource/tool usage,3
+504,,,KTSCH,Standard text key for production resources/tools,7
+505,,,KTSCH_REF,Reference Key Cannot be Changed,1
+506,,,BZOFFB,Reference Date for Start of Production Resource/Tool Usage,2
+507,,,BZOFFB_REF,Offset to start cannot be changed,1
+508,,,OFFSTB,Offset to start of production resource/tool usage,7
+509,,,EHOFFB,Offset unit for start of prod. resource/tool usage,3
+510,,,OFFSTB_REF,Offset to start cannot be changed,1
+511,,,BZOFFE,Reference date for end of production resource/tool usage,2
+512,,,BZOFFE_REF,End reference date cannot be changed,1
+513,,,OFFSTE,Offset to finish of production resource/tool usage,7
+514,,,EHOFFE,Offset unit for end of production resource/tool usage,3
+515,,,OFFSTE_REF,Offset to end cannot be changed,1
+516,,,MGFORM,Formula for calculating the total quantity of PRT,6
+517,,,MGFORM_REF,Formula for calculating the total quantity cannot be changed,1
+518,,,EWFORM,Formula for calculating the total usage value of PRT,6
+519,,,EWFORM_REF,Formula to calculate entire usage value cannot be changed,1
+520,,,PAR01,First parameter (for formulas),6
+521,,,PAR02,Second parameter (for formulas),6
+522,,,PAR03,Third parameter (for formulas),6
+523,,,PAR04,Fourth parameter (for formulas),6
+524,,,PAR05,Fifth parameter (for formulas),6
+525,,,PAR06,Sixth parameter (for formulas),6
+526,,,PARU1,Parameter unit,3
+527,,,PARU2,Parameter unit,3
+528,,,PARU3,Parameter unit,3
+529,,,PARU4,Parameter unit,3
+530,,,PARU5,Parameter unit,3
+531,,,PARU6,Parameter unit,3
+532,,,PARV1,Parameter value,11
+533,,,PARV2,Parameter value,11
+534,,,PARV3,Parameter value,11
+535,MKAL,Master material production version,VERID,Production Version,4
+536,,,BDATU,Valid-To Date of Production Version,8
+537,,,ADATU,Valid-From Date of Production Version,8
+538,,,STLAL,Alternative BOM,2
+539,,,STLAN,BOM Usage,1
+540,,,PLNTY,Task List Type,1
+541,,,PLNNR,Key for Task List Group,8
+542,,,ALNAL,Group Counter,2
+543,,,BESKZ,Procurement Type,1
+544,,,SOBSL,Special procurement type,2
+545,,,LOSGR,Lot Size for Product Costing,15
+546,,,MDV01,Aggregation Field for Production Versions,8
+547,,,MDV02,Aggregation Field for Production Versions,8
+548,,,TEXT1,Short text on the production version,40
+549,,,EWAHR,Usage Probability with Version Control,5
+550,,,VERTO,Distribution key for quantity produced,4
+551,,,SERKZ,Repetitive manufacturing allowed for version,1
+552,,,BSTMI,Lower value of the lot-size interval,15
+553,,,BSTMA,Upper value of the lot-size interval,15
+554,,,RGEKZ,Indicator: backflush for RS header,1
+555,,,ALORT,Receiving storage location for repetitive manufacturing,4
+556,,,PLTYG,Task List Type,1
+557,,,PLNNG,Key for Task List Group,8
+558,,,ALNAG,Group Counter,2
+559,,,PLTYM,Task List Type,1
+560,,,PLNNM,Key for Task List Group,8
+561,,,ALNAM,Group Counter,2
+562,,,CSPLT,Apportionment Structure,4
+563,,,MATKO,Other material for which BOM and task list are maintained,18
+564,,,ELPRO,Proposed issue storage location for components,4
+565,,,PRVBE,Default supply area for components,10
+566,,,MATKO_EXTERNAL,Long Material Number for Field MATKO,40
+567,,,MATKO_VERSION,Version Number for Field MATKO,10
+568,,,MATKO_GUID,External GUID for Field MATKO,32
+569,,,MATKO_LONG,Other material for which BOM and task list are maintained,40
+570,MLAN,Master material tax classification (MLAN),ALAND,Departure country (country from which the goods are sent),3
+571,,,TATY1,"Tax category (sales tax, federal sales tax,...)",4
+572,,,TAXM1,Tax classification material,1
+573,,,TATY2,"Tax category (sales tax, federal sales tax,...)",4
+574,,,TAXM2,Tax classification material,1
+575,,,TATY3,"Tax category (sales tax, federal sales tax,...)",4
+576,,,TAXM3,Tax classification material,1
+577,,,TATY4,"Tax category (sales tax, federal sales tax,...)",4
+578,,,TAXM4,Tax classification material,1
+579,,,TATY5,"Tax category (sales tax, federal sales tax,...)",4
+580,,,TAXM5,Tax classification material,1
+581,,,TATY6,"Tax category (sales tax, federal sales tax,...)",4
+582,,,TAXM6,Tax classification material,1
+583,,,TATY7,"Tax category (sales tax, federal sales tax,...)",4
+584,,,TAXM7,Tax classification material,1
+585,,,TATY8,"Tax category (sales tax, federal sales tax,...)",4
+586,,,TAXM8,Tax classification material,1
+587,,,TATY9,"Tax category (sales tax, federal sales tax,...)",4
+588,,,TAXM9,Tax classification material,1
+589,,,TAXIM,Tax indicator for material (Purchasing),1
+590,MLGN,Master material material data per warehouse number (MLGN),LGNUM,Warehouse Number / Warehouse Complex,3
+591,,,LVORM,Deletion flag for all material data of a warehouse number,1
+592,,,LGBKZ,Storage Section Indicators,3
+593,,,LTKZE,Storage type indicator for stock placement,3
+594,,,LTKZA,Storage type indicator for stock removal,3
+595,,,LHMG1,Loading equipment quantity,14
+596,,,LHMG2,Loading equipment quantity,14
+597,,,LHMG3,Loading equipment quantity,14
+598,,,LHME1,Unit of measure for loading equipment quantity,3
+599,,,LHME2,Unit of measure for loading equipment quantity,3
+600,,,LHME3,Unit of measure for loading equipment quantity,3
+601,,,LETY1,Storage Unit Type,3
+602,,,LETY2,Storage Unit Type,3
+603,,,LETY3,Storage Unit Type,3
+604,,,LVSME,Warehouse Management Unit of Measure,3
+605,,,KZZUL,Indicator: Allow addition to existing stock,1
+606,,,BLOCK,Bulk storage indicator,2
+607,,,KZMBF,Indicator: Message to inventory management,1
+608,,,BSSKZ,Special movement indicator for warehouse management,1
+609,,,MKAPV,Capacity usage,13
+610,,,BEZME,Unit of measure for capacity consumption,3
+611,,,PLKPT,Picking storage type for rough-cut and detailed planning,3
+612,,,VOMEM,Default for unit of measure from material master record,1
+613,,,L2SKR,Material relevance for 2-step picking,1
+614,MLGT,Material Master: Material Data for Each Storage Type (MLGT),LGTYP,Storage Type,3
+615,,,LVORM,Deletion flag for all material data of a storage type,1
+616,,,LGPLA,Storage Bin,10
+617,,,LPMAX,Maximum storage bin quantity,15
+618,,,LPMIN,Minimum storage bin quantity,15
+619,,,MAMNG,Control quantity,15
+620,,,NSMNG,Replenishment quantity,15
+621,,,KOBER,Picking Area,3
+622,,,RDMNG,Rounding qty,15
+623,MPGD,Master material product group,PRGRP,Planning material,8
+624,,,PRWRK,Planning plant,4
+625,,,UMREF,Conv. factor f. plng material,10
+626,,,PRGRP_EXTERNAL,Name of Product Group,40
+627,,,PRGRP_VERSION,Version Number for Field PRGRP,10
+628,,,PRGRP_GUID,External GUID for Field PRGRP,32
+629,MPOP,Master material forecast parameter,VERSP,Version number of forecast parameters,2
+630,,,PROPR,Forecast profile,4
+631,,,MODAW,Model Selection Indicator,1
+632,,,MODAV,Model selection procedure,1
+633,,,KZPAR,Indicator for parameter optimization,1
+634,,,OPGRA,Optimization level,1
+635,,,KZINI,Initialization indicator,1
+636,,,PRMOD,Forecast model,1
+637,,,ALPHA,Basic value smoothing using alpha factor,5
+638,,,BETA1,Trend value smoothing using the beta factor,5
+639,,,GAMMA,Seasonal index smoothing using gamma factor,5
+640,,,DELTA,MAD (mean absolute deviation) smoothing using delta factor,5
+641,,,EPSIL,Epsilon factor,5
+642,,,SIGGR,Tracking limit,7
+643,,,PERKZ,Period Indicator,1
+644,,,PRDAT,Date of last forecast,8
+645,,,PERAN,Number of historical periods,5
+646,,,PERIN,Number of periods for initialization,5
+647,,,PERIO,Number of periods per seasonal cycle,5
+648,,,PEREX,Number of periods for ex-post forecasting,5
+649,,,ANZPR,Number of forecast periods,5
+650,,,FIMON,Fixed periods,5
+651,,,GWERT,Basic value,15
+652,,,GWER1,Basic value of the 2nd order,15
+653,,,GWER2,Basic value of the 2nd order,15
+654,,,VMGWE,Basic value of previous period,15
+655,,,VMGW1,Base value of the second order in previous period,15
+656,,,VMGW2,Base value of the second order in previous period,15
+657,,,TWERT,Trend value,15
+658,,,VMTWE,Trend value of previous period,15
+659,,,PRMAD,Mean absolute deviation (MAD),15
+660,,,VMMAD,Mean absolute devaition of previous period,15
+661,,,FSUMM,Error total,15
+662,,,VMFSU,Error total for the previous period,15
+663,,,GEWGR,Weighting group,2
+664,,,THKOF,Theil coefficient,7
+665,,,AUSNA,Exception message bar,30
+666,,,PROAB,Forecast flow control,10
+667,,,E1MPRWM,Master material forecast value,
+668,,,MSGFN,Function,3
+669,,,ERTAG,First day of the period to which the values refer,8
+670,,,PRWRT,Forecast value,15
+671,,,KOPRW,Corrected value for forecast,15
+672,,,SAIIN,Seasonal index,7
+673,,,FIXKZ,Indicator: consumption value is fixed,1
+674,,,EXPRW,Ex-post forecast value,15
+675,,,ANTEI,Ratio of the corrected value to the original value (CV:OV),6
+676,,,E1MVEGM,Master material total consumption,
+677,,,MSGFN,Function,3
+678,,,ERTAG,First day of the period to which the values refer,8
+679,,,VBWRT,Consumption value,15
+680,,,KOVBW,Corrected consumption value,15
+681,,,KZEXI,Checkbox,1
+682,,,ANTEI,Ratio of the corrected value to the original value (CV:OV),6
+683,MVEU,Master material unplanned consumption,ERTAG,First day of the period to which the values refer,8
+684,,,VBWRT,Consumption value,15
+685,,,KOVBW,Corrected consumption value,15
+686,,,KZEXI,Checkbox,1
+687,,,ANTEI,Ratio of the corrected value to the original value (CV:OV),6
+688,MVKE,Master material sales data (MVKE),VKORG,Sales Organization,4
+689,,,VTWEG,Distribution Channel,2
+690,,,LVORM,Ind.: Flag material for deletion at distribution chain level,1
+691,,,VERSG,Material statistics group,1
+692,,,BONUS,Volume rebate group,2
+693,,,PROVG,Commission group,2
+694,,,SKTOF,Cash discount indicator,1
+695,,,VMSTA,Distribution-chain-specific material status,2
+696,,,VMSTD,Date from which distr.-chain-spec. material status is valid,8
+697,,,AUMNG,Minimum order quantity in base unit of measure,14
+698,,,LFMNG,Minimum delivery quantity in delivery note processing,14
+699,,,EFMNG,Minimum make-to-order quantity,14
+700,,,SCMNG,Delivery unit,14
+701,,,SCHME,Unit of measure of delivery unit,3
+702,,,VRKME,Sales Unit,3
+703,,,MTPOS,Item category group from material master,4
+704,,,DWERK,Delivering Plant,4
+705,,,PRODH,Product Hierarchy,18
+706,,,PMATN,Pricing Reference Material,18
+707,,,KONDM,Material Pricing Group,2
+708,,,KTGRM,Account assignment group for this material,2
+709,,,MVGR1,Material group 1,3
+710,,,MVGR2,Material group 2,3
+711,,,MVGR3,Material group 3,3
+712,,,MVGR4,Material group 4,3
+713,,,MVGR5,Material group 5,3
+714,,,SSTUF,Assortment grade,2
+715,,,PFLKS,External assortment priority,1
+716,,,LSTFL,Listing procedure for store or other assortment categories,2
+717,,,LSTVZ,Listing procedure for distr. center assortment categories,2
+718,,,LSTAK,Listing functions (assortments) are active,1
+719,,,PRAT1,ID for product attribute 1,1
+720,,,PRAT2,ID for product attribute 2,1
+721,,,PRAT3,ID for product attribute 3,1
+722,,,PRAT4,ID for product attribute 4,1
+723,,,PRAT5,ID for product attribute 5,1
+724,,,PRAT6,ID for product attribute 6,1
+725,,,PRAT7,ID for product attribute 7,1
+726,,,PRAT8,ID for product attribute 8,1
+727,,,PRAT9,ID for product attribute 9,1
+728,,,PRATA,ID for product attribute 10,1
+729,,,VAVME,Variable Sales Unit Not Allowed,1
+730,,,"RDPRF""",Rounding Profile,4
+731,,,MEGRU,Unit of Measure Group,4
+732,,,PMATN_EXTERNAL,Long Material Number for Field PMATN,40
+733,,,PMATN_VERSION,Version Number for Field PMATN,10
+734,,,PMATN_GUID,External GUID for Field PMATN,32
+735,,,PMATN_LONG,Pricing Reference Material,40
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
