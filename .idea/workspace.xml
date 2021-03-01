@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcf382a5-4620-47db-9ed3-b1651ff6a867" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pythonProject1/dmac/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/concat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/posttable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/templates/dmac/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pythonProject1/dmac/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/dmac/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject1/pythonProject1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/pythonProject1/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +38,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pythonProject1/dmac/migrations" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\pythonProject1\pythonProject1\dmac\migrations" />
+      <recent name="C:\Users\Lenovo\Desktop\pythonProject1\pythonProject1\dmac\templates\dmac" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post table</title>
+
+</head>
+<body>
+<p>this is new page</p>
+ <form action = "{% url 'dmac:postdata' %}" method = "POST" id="signup-form" enctype="multipart/form-data" >
+{% csrf_token %}
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "table_name" name = "table_name" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit"
+                  value = "Login" >
+                  <strong>Submit</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+<p>{{ table }}</p>
+
+{{ data1 }}
+</body>

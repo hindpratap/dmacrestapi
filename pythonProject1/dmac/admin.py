@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-# from . models import legacytable1
+from . models import Lead
 
-# admin.site.register([legacytable1])
+admin.site.register(Lead)

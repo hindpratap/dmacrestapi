@@ -224,3 +224,161 @@ def finaljson(request):
         fitdata = list(unique_everseen(plusdata, key=lambda item: frozenset(item.items())))
         print(fitdata)
         return render(request, 'dmac/product.html', {'fitdata': fitdata})
+
+
+def posttable(request):
+    return render(request,'dmac/posttable.html')
+
+@api_view(["POST"])
+def postdata(request):
+    try:
+        if request.method == "POST":
+            table_name = request.POST.get('table_name')
+            # table_name = json.loads(table_name.body)
+        print(table_name)
+        table="your selected table:"+" "+table_name
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # l3.to_sql('legacytable3', engine,  if_exists='append')
+        l1 = pd.read_sql_query(f'select * from {table_name}', con=engine)
+        data1 = l1.to_json(orient='records')
+
+        return render(request,'dmac/posttable.html',{'table':table,'data1':data1})
+        # return redirect('dmac:posttable')
+    except:
+        table_name = json.loads(request.body)
+        print(table_name)
+        table = "your selected table:" + " " + table_name
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # l3.to_sql('legacytable3', engine,  if_exists='append')
+        l1 = pd.read_sql_query(f'select * from {table_name}', con=engine)
+        data1 = l1.to_json(orient='records')
+
+
+        return JsonResponse("Ideal weight should be:" + data1, safe=False)
+
+
+def concattable(request):
+    return render(request,'dmac/concat.html')
+
+@api_view(["POST"])
+def concatdata(request):
+    try:
+        if request.method == "POST":
+            table1 = request.POST.get('table_name1')
+            table2 = request.POST.get('table_name2')
+            print(table1)
+            print(table2)
+
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # l3.to_sql('legacytable3', engine,  if_exists='append')
+        l1 = pd.read_sql_query(f'select * from {table1}', con=engine)
+        l2 = pd.read_sql_query(f'select * from {table2}', con=engine)
+        merg1 = pd.merge(l1, l2, how="outer")
+        concat = merg1.to_json(orient='records')
+        # merg1["Full Name"] = merg1["First Name"] + "  " + merg1["Last Name"]
+
+        return render(request,'dmac/concat.html',{'merg1':merg1,'concat':concat})
+    except:
+        table_name = json.loads(request.body)
+        # table_name=pd.read_csv(request.body)
+        print(table_name)
+
+        #
+        # engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # # l3.to_sql('legacytable3', engine,  if_exists='append')
+        # l1 = pd.read_sql_query(f'select * from {table_name}', con=engine)
+        # data1 = l1.to_json(orient='records')
+
+        # return JsonResponse("Ideal weight should be:" + data1, safe=False)
+        return JsonResponse(table_name, safe=False)
+
+
+
+@csrf_exempt
+def article_list(request):
+
+    if request.method == 'GET':
+        articles = Lead.objects.all()
+        serializer =LeadSerializer(articles, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        s1=data["table1"]
+        s2=data["table2"]
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # l3.to_sql('legacytable3', engine,  if_exists='append')
+        l1 = pd.read_sql_query(f'select * from {s1}', con=engine)
+        l2 = pd.read_sql_query(f'select * from {s2}', con=engine)
+        merg1 = pd.merge(l1, l2, how="outer")
+        print(merg1)
+        concat = merg1.to_json(orient='records')
+        final=json.loads(concat)
+        print(final)
+        print(type(final))
+        serializer = LeadSerializer(data=data)
+        # print(serializer.data["table1"])
+        # print(serializer.data["table2"])
+
+        # if serializer.is_valid():
+        #     serializer.save()
+        # return concat
+        return JsonResponse(final, safe=False)
+        # return JsonResponse(serializer.errors, status=400)
+
+
+@csrf_exempt
+def tab_details(request):
+        data = JSONParser().parse(request)
+        print(type(data))
+        # s1=data["table1"]
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        # # l3.to_sql('legacytable3', engine,  if_exists='append')
+        l1 = pd.read_sql_query(f'select * from {data}', con=engine)
+        print(l1)
+        # l2 = pd.read_sql_query(f'select * from {s2}', con=engine)
+        # merg1 = pd.merge(l1, l2, how="outer")
+        # print(merg1)
+        concat = l1.to_json(orient='records')
+        final=json.loads(concat)
+
+        return JsonResponse(final, safe=False)
+        # return JsonResponse(serializer.errors, status=400)
+
+
+@csrf_exempt
+def jsonreducer(request):
+    data = JSONParser().parse(request)
+    print(data)
+    plusdata = data
+    print(plusdata)
+    plusdata.sort(key=lambda item: item.get("id"))
+    print(plusdata)
+    for i in range(len(plusdata) - 1):
+        if (plusdata[i]["id"] == plusdata[i + 1]["id"]):
+            plusdata[i].update(plusdata[i + 1])
+
+    for i in range(len(plusdata) - 1):
+        if (plusdata[i]["id"] == plusdata[i + 1]["id"]):
+            plusdata[i].update(plusdata[i + 1])
+            plusdata[i + 1].update(plusdata[i])
+    fitdata = list(unique_everseen(plusdata, key=lambda item: frozenset(item.items())))
+
+    # concat = l1.to_json(orient='records')
+    # final = json.loads(concat)
+
+    return JsonResponse(fitdata, safe=False)
+    # return JsonResponse(serializer.errors, status=400)
+
+@csrf_exempt
+def save_json_to_table(request):
+    data = JSONParser().parse(request)
+    mdata=pd.DataFrame(data)
+    print(mdata)
+    print(data)
+
+
+    # concat = l1.to_json(orient='records')
+    # final = json.loads(concat)
+
+    return JsonResponse(data, safe=False)
+    # return JsonResponse(serializer.errors, status=400)
