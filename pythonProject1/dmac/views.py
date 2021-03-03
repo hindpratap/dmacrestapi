@@ -229,7 +229,7 @@ def finaljson(request):
 def posttable(request):
     return render(request,'dmac/posttable.html')
 
-@api_view(["POST"])
+# @api_view(["POST"])
 def postdata(request):
     try:
         if request.method == "POST":
@@ -260,7 +260,7 @@ def postdata(request):
 def concattable(request):
     return render(request,'dmac/concat.html')
 
-@api_view(["POST"])
+# @api_view(["POST"])
 def concatdata(request):
     try:
         if request.method == "POST":
