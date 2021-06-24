@@ -22,6 +22,12 @@ urlpatterns = [
     path('concattable/', views.concattable, name ="concattable"),
     path('jsonreducer/', views.jsonreducer, name ="jsonreducer"),
     path('save_json_to_table/', views.save_json_to_table, name ="save_json_to_table"),
+    path('twotables/', views.twotables, name ="twotables"),
+    path('connections/', views.connections, name ="connections"),
+    path('table_names/', views.table_names, name ="table_names"),
+    path('twotables_detail/', views.twotables_detail, name ="twotables_detail"),
+    path('thankyou/', views.thankyou, name ="thankyou"),
+    path('display_singletable/', views.display_singletable, name ="display_singletable"),
 
 ]
 # urlpatterns = router.urls
