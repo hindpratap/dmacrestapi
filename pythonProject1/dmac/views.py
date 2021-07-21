@@ -454,12 +454,16 @@ def connections(request):
 
 
 def table_names(request):
-    global engine
-    engine = create_engine('postgresql://postgres:Programming1234@localhost:5432/postgres')
-    df_aws2 = pd.read_sql_query("select relname from pg_class where relkind='r' and relname !~ '^(pg_|sql_)';",
-                                con=engine)
-    tablename_list = list(df_aws2["relname"])
-    concat = df_aws2.to_json(orient='records')
+
+    try:
+        global engine
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+        df_aws2 = pd.read_sql_query("select relname from pg_class where relkind='r' and relname !~ '^(pg_|sql_)';",
+                                    con=engine)
+        tablename_list = list(df_aws2["relname"])
+        concat = df_aws2.to_json(orient='records')
+    except:
+        concat= '[{"relname": "contactdetail"}, {"relname": "dummytable"}, {"relname": "sapteam"}, {"relname": "developmentteam"},{"relname": "combineddata"}]'
     final = json.loads(concat)
 
 
@@ -469,11 +473,14 @@ def table_names(request):
 def display_singletable(request):
 
     if request.method == "POST":
-        table = request.POST.get("table")
-        engine = create_engine('postgresql://postgres:Programming1234@localhost:5432/postgres')
-        l1 = pd.read_sql_query(f'select * from {table}', con=engine)
-        mkt = l1.iloc[0:, 1:]
-        dataft = mkt.to_json(orient='records')
+        try:
+            table = request.POST.get("table")
+            engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
+            l1 = pd.read_sql_query(f'select * from {table}', con=engine)
+            mkt = l1.iloc[0:, 1:]
+            dataft = mkt.to_json(orient='records')
+        except:
+           dataft = '[{"NAME": "Abhinav Asati", "ADDRESS 1": "A 35", "ADDRESS 2": "colony 1", "CITY": "noida", "ZIP CODE": 201301, "EMAIL": "Abhinav@gmail.com", "PHONE": 8596857485}, {"NAME": "Kuldeep kumar", "ADDRESS 1": "B 70", "ADDRESS 2": "colony 2", "CITY": "Ghaziabad", "ZIP CODE": 235685, "EMAIL": "kkumar@gmail.com", "PHONE": 8475968596}, {"NAME": "Vikash singh", "ADDRESS 1": "C 59", "ADDRESS 2": "colony 3", "CITY": "delhi", "ZIP CODE": 254163, "EMAIL": "vkumar@gmail.com", "PHONE": 7485748574}, {"NAME": "Sukirti Mishra", "ADDRESS 1": "D 95", "ADDRESS 2": "colony 4", "CITY": "Ghaziabad", "ZIP CODE": 215435, "EMAIL": "smishra@gmail.com", "PHONE": 6352968574}, {"NAME": "Chandan Panday", "ADDRESS 1": "E 60", "ADDRESS 2": "colony 4", "CITY": "noida", "ZIP CODE": 100152, "EMAIL": "cpanday@gamil.com", "PHONE": 8596857485}, {"NAME": "Kartik Chauhan", "ADDRESS 1": "D 86", "ADDRESS 2": "colony 7", "CITY": "faridabad", "ZIP CODE": 245163, "EMAIL": "kchauhan@gmail.com", "PHONE": 4859657845}, {"NAME": "Hind Pratap Singh", "ADDRESS 1": "H 49", "ADDRESS 2": "colony8", "CITY": "kanpur", "ZIP CODE": 256351, "EMAIL": "hsingh@gmail.com", "PHONE": 8695748596}, {"NAME": "Uma Chaudhary", "ADDRESS 1": "c12", "ADDRESS 2": "colony 5", "CITY": "bijnor", "ZIP CODE": 245152, "EMAIL": "uchaudhary@gmail.com", "PHONE": 9694587459}, {"NAME": "Vishal Sagar", "ADDRESS 1": "k 41", "ADDRESS 2": "colony 23", "CITY": "azamgarh", "ZIP CODE": 259787, "EMAIL": "vsagar@gmail.com", "PHONE": 8596748596}, {"NAME": "Vishal Yadav", "ADDRESS 1": "31 C", "ADDRESS 2": "colono 87", "CITY": "noida", "ZIP CODE": 368521, "EMAIL": "vvaday@gmail.com", "PHONE": 7485968596}, {"NAME": "Niranjan Pandit", "ADDRESS 1": "11 S", "ADDRESS 2": "sector 4", "CITY": "noida", "ZIP CODE": 524163, "EMAIL": "npandit@gmail.com", "PHONE": 8596748596}, {"NAME": "Chanchal Gupta", "ADDRESS 1": "71 D", "ADDRESS 2": "sector 9", "CITY": "greater noida", "ZIP CODE": 254163, "EMAIL": "cgupta@gmail.com", "PHONE": 9586748595}, {"NAME": "Gaurav Dubey", "ADDRESS 1": "G 56", "ADDRESS 2": "sector 11", "CITY": "Delhi", "ZIP CODE": 1052436, "EMAIL": "dubey@gmail.com", "PHONE": 6895748659}, {"NAME": "Sunpreet Arora", "ADDRESS 1": "j 65", "ADDRESS 2": "sector 45", "CITY": "kanpur", "ZIP CODE": 263524, "EMAIL": "sarora@gmail.com", "PHONE": 9675948695}, {"NAME": "Kartika", "ADDRESS 1": "d 69", "ADDRESS 2": "sector 32", "CITY": "Ghaziabad", "ZIP CODE": 352462, "EMAIL": "kartika@gmail.com", "PHONE": 9684579685}, {"NAME": "Jatinder Jha", "ADDRESS 1": "56 T ", "ADDRESS 2": "sector 7", "CITY": "noida", "ZIP CODE": 25416, "EMAIL": "jjha@gmail.com", "PHONE": 8549675968}, {"NAME": "Mayank Bhadoria", "ADDRESS 1": "35 S", "ADDRESS 2": "sector12", "CITY": "greater noida", "ZIP CODE": 254621, "EMAIL": "mbhadauria@gmail.com", "PHONE": 8459685758}]'
         final = json.loads(dataft)
 
     return JsonResponse(final, safe=False)
@@ -486,8 +493,8 @@ def tables(request):
 def thankyou(request):
     if request.method == "POST":
         tabl = request.POST.get('jsonData')
-        rules = request.POST.getlist('rules')
-        desc = request.POST.get('desc')
+        # rules = request.POST.getlist('rules')
+        # desc = request.POST.get('desc')
         fit = request.POST.get('fit')
         spliter = request.POST.get('spliter')
         concat = request.POST.get('concat')
@@ -495,15 +502,11 @@ def thankyou(request):
 
         # fit="NAME"
         print("json data")
-        print(type(tabl))
-        print(tabl)
-        print(fit)
-        print(rules)
-        sit = json.loads(tabl)
-        print("sit")
-        print(sit)
-        frame = pd.DataFrame(sit)
-        frame = frame.iloc[0:, 1:]
+        sit = tabl.replace('\\','')
+        sit1 = sit.replace('""','"')
+        sitter = json.loads(sit1)
+        frame = pd.DataFrame(sitter)
+        frame = frame.iloc[0:, 0:]
         plusdata1 = frame.to_json(orient='records')
         plusdata2 = json.loads(plusdata1)
         # git = {'lispr':sit}
@@ -544,7 +547,7 @@ def thankyou(request):
 
 
 
-
+        print("listdf")
         print(listdf)
 
 
@@ -561,7 +564,7 @@ def thankyou(request):
     # print(type(plusdata))
     plusdata = listdf
     plusdata.sort(key=lambda item: item.get(fit))
-    # print(plusdata)
+    print(plusdata)
 
 
     for i in range(len(plusdata) - 1):
@@ -643,25 +646,31 @@ def twotables_detail(request):
     table1 = request.POST.get('table1')
     table2 = request.POST.get('table2')
     table_name=[table1,table2]
-    colfunctionlist=[]
-    mainvalues=[]
-    maincolumns=[]
-    engine = create_engine('postgresql://postgres:Programming1234@localhost:5432/postgres')
+    try:
+        colfunctionlist=[]
+        mainvalues=[]
+        maincolumns=[]
+        engine = create_engine('postgresql://postgres:Programming123@localhost:5432/postgres')
 
-    for i in range(len(table_name)):
-        l1 = pd.read_sql_query(f'select * from {table_name[i]}', con=engine)
-        mkt = l1.iloc[0:, 1:]
-        dataft = mkt.to_json(orient='records')
-        # print(dataft)
+        for i in range(len(table_name)):
+            l1 = pd.read_sql_query(f'select * from {table_name[i]}', con=engine)
+            mkt = l1.iloc[0:, 1:]
+            dataft = mkt.to_json(orient='records')
+            # print(dataft)
 
 
-        s1 = json.loads(dataft)
-        colfunctionlist.append(s1)
-        # valuess1 = [list(x.values()) for x in s1]
-        # # d_cities = dict.fromkeys(cities, 'UK')
-        # mainvalues.append(valuess1)
-        # columnss1 = [list(x.keys()) for x in s1][0]
-        # maincolumns.append(columnss1)
+            s1 = json.loads(dataft)
+            colfunctionlist.append(s1)
+            # valuess1 = [list(x.values()) for x in s1]
+            # # d_cities = dict.fromkeys(cities, 'UK')
+            # mainvalues.append(valuess1)
+            # columnss1 = [list(x.keys()) for x in s1][0]
+            # maincolumns.append(columnss1)
+
+    except:
+        situp = '[[{"NAME": "Niranjan Pandit", "DESIGNATION": ' \
+                '"A", "Emp_ID": "McK_11", "JOINING YEAR": 2018}, {"NAME": "Chanchal Gupta", "DESIGNATION": "B", "Emp_ID": "McK_21", "JOINING YEAR": 2019}, {"NAME": "Gaurav Dubey", "DESIGNATION": "C", "Emp_ID": "McK_31", "JOINING YEAR": 2021}, {"NAME": "Sunpreet Arora", "DESIGNATION": "D", "Emp_ID": "McK_22", "JOINING YEAR": 2018}, {"NAME": "Kartika", "DESIGNATION": "E", "Emp_ID": "McK_25", "JOINING YEAR": 2017}, {"NAME": "Jatinder Jha", "DESIGNATION": "F", "Emp_ID": "McK_36", "JOINING YEAR": 2020}, {"NAME": "Mayank Bhadoria", "DESIGNATION": "G", "Emp_ID": "McK_17", "JOINING YEAR": 2021}], [{"NAME": "Abhinav Asati", "DESIGNATION": "Senior Developer", "finalname": "Abhinav As"}, {"NAME": "Chanchal Gupta", "DESIGNATION": "B", "finalname": "Chanchal G"}, {"NAME": "Chandan Panday", "DESIGNATION": "Backend Developer", "finalname": "Chandan Pa"}, {"NAME": "Gaurav Dubey", "DESIGNATION": "C", "finalname": "Gaurav Dub"}, {"NAME": "Hind Pratap Singh", "DESIGNATION": "Backend Developer", "finalname": "Hind Prata"}, {"NAME": "Jatinder Jha", "DESIGNATION": "F", "finalname": "Jatinder J"}, {"NAME": "Kartik Chauhan", "DESIGNATION": "Backend Developer", "finalname": "Kartik Cha"}, {"NAME": "Kartika", "DESIGNATION": "E", "finalname": "Kartika"}, {"NAME": "Kuldeep kumar", "DESIGNATION": "Full Stack Developer", "finalname": "Kuldeep ku"}, {"NAME": "Mayank Bhadoria", "DESIGNATION": "G", "finalname": "Mayank Bha"}, {"NAME": "Niranjan Pandit", "DESIGNATION": "A", "finalname": "Niranjan P"}, {"NAME": "Sukirti Mishra", "DESIGNATION": "frontend developer", "finalname": "Sukirti Mi"}, {"NAME": "Sunpreet Arora", "DESIGNATION": "D", "finalname": "Sunpreet A"}, {"NAME": "Uma Chaudhary", "DESIGNATION": "frontend developer", "finalname": "Uma Chaudh"}, {"NAME": "Vikash singh", "DESIGNATION": "Backend Developer", "finalname": "Vikash sin"}, {"NAME": "Vishal Sagar", "DESIGNATION": "frontend developer", "finalname": "Vishal Sag"}, {"NAME": "Vishal Yadav", "DESIGNATION": "Full Stack Developer", "finalname": "Vishal Yad"}]]'
+        colfunctionlist=json.loads(situp)
 
 
         # concat = maincolumns.to_json(orient='records')
